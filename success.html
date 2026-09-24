@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Foodie — Order Confirmed
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<main class="success-page">
+
+
+    <div class="success-card">
+
+
+        <!-- SUCCESS ICON -->
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+
+        <span class="eyebrow">
+            ORDER CONFIRMED
+        </span>
+
+
+        <h1>
+            You're all set! 🎉
+        </h1>
+
+
+        <p id="successText">
+            Your delicious food is being prepared.
+        </p>
+
+
+        <!-- ORDER NUMBER -->
+
+        <div class="order-number">
+
+            Order #FD
+
+            <span id="orderNumber">
+                0000
+            </span>
+
+        </div>
+
+
+
+        <!-- DELIVERY INFORMATION -->
+
+        <div class="success-info">
+
+
+            <div>
+
+                🚴
+
+                <b>
+                    On the way soon
+                </b>
+
+                <small>
+                    You'll receive your order shortly.
+                </small>
+
+            </div>
+
+
+            <div>
+
+                📍
+
+                <b>
+                    Delivery address
+                </b>
+
+                <small id="successAddress">
+                    Your address
+                </small>
+
+            </div>
+
+
+        </div>
+
+
+
+        <a
+            class="btn btn-primary full"
+            href="menu.html">
+
+            Order More Food
+
+        </a>
+
+
+        <a
+            class="text-link"
+            href="index.html">
+
+            Back to home
+
+        </a>
+
+    </div>
+
+</main>
+
+
+
+<script>
+
+    const orderData =
+        JSON.parse(
+            localStorage.getItem("foodie_last_order") || "{}"
+        );
+
+
+    document.getElementById("orderNumber")
+        .textContent =
+        orderData.number || "0000";
+
+
+    document.getElementById("successAddress")
+        .textContent =
+        orderData.address || "Your address";
+
+
+    document.getElementById("successText")
+        .textContent =
+        orderData.name
+        ? `Thanks ${orderData.name}! Your delicious food is being prepared.`
+        : "Your delicious food is being prepared.";
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Foodie — Checkout
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <a class="brand" href="index.html">
+
+        <span class="logo-mark">
+            🍴
+        </span>
+
+        <span>
+            foodie
+        </span>
+
+    </a>
+
+
+    <nav>
+
+        <a href="menu.html">
+            Menu
+        </a>
+
+        <a href="cart.html">
+
+            Cart
+
+            <span class="cart-badge cart-count">
+                0
+            </span>
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="checkout-main">
+
+
+    <!-- CHECKOUT STEPS -->
+
+    <div class="steps">
+
+        <span class="done">
+            1 Cart
+        </span>
+
+        <i>
+            →
+        </i>
+
+        <span class="current">
+            2 Details
+        </span>
+
+        <i>
+            →
+        </i>
+
+        <span>
+            3 Confirmation
+        </span>
+
+    </div>
+
+
+
+    <div class="checkout-layout">
+
+
+        <!-- ================= CUSTOMER FORM ================= -->
+
+        <section class="form-panel">
+
+            <div class="page-title">
+
+                <span class="eyebrow">
+                    ALMOST THERE
+                </span>
+
+                <h1>
+                    Delivery details
+                </h1>
+
+                <p>
+                    Tell us where to bring your food.
+                </p>
+
+            </div>
+
+
+            <form id="checkoutForm">
+
+
+                <!-- NAME + PHONE -->
+
+                <div class="form-grid">
+
+                    <label>
+
+                        Full name
+
+                        <input
+                            required
+                            id="name"
+                            placeholder="e.g. Adwaith C S">
+
+                    </label>
+
+
+                    <label>
+
+                        Phone number
+
+                        <input
+                            required
+                            id="phone"
+                            type="tel"
+                            pattern="[0-9]{10}"
+                            placeholder="10-digit mobile number">
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- ADDRESS -->
+
+                <label>
+
+                    Delivery address
+
+                    <textarea
+                        required
+                        id="address"
+                        rows="3"
+                        placeholder="House / flat, street, area">
+                    </textarea>
+
+                </label>
+
+
+
+                <!-- CITY + PIN -->
+
+                <div class="form-grid">
+
+                    <label>
+
+                        City
+
+                        <input
+                            required
+                            id="city"
+                            value="Thrissur">
+
+                    </label>
+
+
+                    <label>
+
+                        PIN code
+
+                        <input
+                            required
+                            id="pin"
+                            inputmode="numeric"
+                            pattern="[0-9]{6}"
+                            placeholder="680001">
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- INSTRUCTIONS -->
+
+                <label>
+
+                    Delivery instructions
+
+                    <span class="optional">
+                        (optional)
+                    </span>
+
+                    <textarea
+                        id="instructions"
+                        rows="2"
+                        placeholder="e.g. Please call when you arrive">
+                    </textarea>
+
+                </label>
+
+
+
+                <!-- PAYMENT -->
+
+                <h2 class="payment-heading">
+                    Payment method
+                </h2>
+
+
+                <div class="payment-options">
+
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="UPI"
+                            checked>
+
+                        <span>
+                            📱
+                        </span>
+
+                        <div>
+
+                            <b>
+                                UPI
+                            </b>
+
+                            <small>
+                                Google Pay, PhonePe, etc.
+                            </small>
+
+                        </div>
+
+                    </label>
+
+
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="Card">
+
+                        <span>
+                            💳
+                        </span>
+
+                        <div>
+
+                            <b>
+                                Card
+                            </b>
+
+                            <small>
+                                Credit or debit card
+                            </small>
+
+                        </div>
+
+                    </label>
+
+
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="COD">
+
+                        <span>
+                            💵
+                        </span>
+
+                        <div>
+
+                            <b>
+                                Cash on delivery
+                            </b>
+
+                            <small>
+                                Pay when your food arrives
+                            </small>
+
+                        </div>
+
+                    </label>
+
+                </div>
+
+
+
+                <button
+                    class="btn btn-primary full"
+                    type="submit">
+
+                    Place Order ·
+
+                    <span id="checkoutTotal">
+                        ₹0
+                    </span>
+
+                </button>
+
+            </form>
+
+        </section>
+
+
+
+        <!-- ================= ORDER SUMMARY ================= -->
+
+        <aside class="summary-card mini-summary">
+
+            <h2>
+                Your order
+            </h2>
+
+            <div id="checkoutItems">
+            </div>
+
+            <hr>
+
+            <div class="total-row">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="checkoutTotalSide">
+                    ₹0
+                </strong>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="brand">
+
+        <span class="logo-mark">
+            🍴
+        </span>
+
+        <span>
+            foodie
+        </span>
+
+    </div>
+
+    <p>
+        🔒 Your information is handled securely.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

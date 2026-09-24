@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Foodie — Explore Food</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <a class="brand" href="index.html">
+
+        <span class="logo-mark">
+            🍴
+        </span>
+
+        <span>
+            foodie
+        </span>
+
+    </a>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-wrap">
+
+        <span>
+            ⌕
+        </span>
+
+        <input
+            id="searchInput"
+            type="search"
+            placeholder="Search for dishes or restaurants..."
+        >
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a class="active" href="menu.html">
+            Menu
+        </a>
+
+        <a href="cart.html">
+
+            Cart
+
+            <span class="cart-badge cart-count">
+                0
+            </span>
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="menu-main">
+
+
+    <!-- MENU HERO -->
+
+    <section class="menu-hero">
+
+        <div>
+
+            <span class="eyebrow">
+                DISCOVER • ORDER • ENJOY
+            </span>
+
+            <h1>
+
+                What are you
+                <br>
+
+                <span>
+                    craving today?
+                </span>
+
+            </h1>
+
+        </div>
+
+
+        <div class="delivery-pill">
+
+            📍
+
+            <span>
+
+                <small>
+                    Delivering to
+                </small>
+
+                <b>
+                    Thrissur, Kerala
+                </b>
+
+            </span>
+
+            ✎
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FILTERS ================= -->
+
+    <section
+        class="filter-area"
+        id="restaurants"
+    >
+
+        <div class="chips">
+
+            <button
+                class="chip active"
+                data-category="All">
+
+                All
+
+            </button>
+
+
+            <button
+                class="chip"
+                data-category="Pizza">
+
+                🍕 Pizza
+
+            </button>
+
+
+            <button
+                class="chip"
+                data-category="Burger">
+
+                🍔 Burgers
+
+            </button>
+
+
+            <button
+                class="chip"
+                data-category="Indian">
+
+                🍛 Indian
+
+            </button>
+
+
+            <button
+                class="chip"
+                data-category="Chinese">
+
+                🥡 Chinese
+
+            </button>
+
+
+            <button
+                class="chip"
+                data-category="Dessert">
+
+                🍰 Desserts
+
+            </button>
+
+
+            <button
+                class="chip"
+                data-category="Healthy">
+
+                🥗 Healthy
+
+            </button>
+
+        </div>
+
+
+        <select
+            id="sortSelect"
+            class="sort-select"
+        >
+
+            <option value="popular">
+                Most popular
+            </option>
+
+            <option value="rating">
+                Highest rated
+            </option>
+
+            <option value="price-low">
+                Price: low to high
+            </option>
+
+            <option value="price-high">
+                Price: high to low
+            </option>
+
+        </select>
+
+    </section>
+
+
+
+    <!-- ================= RESTAURANT BANNER ================= -->
+
+    <section>
+
+        <div class="restaurant-banner">
+
+            <div>
+
+                <span class="eyebrow">
+                    FEATURED PARTNER
+                </span>
+
+                <h2>
+                    Good food starts here.
+                </h2>
+
+                <p>
+                    Hand-picked restaurants with great ratings
+                    and reliable delivery.
+                </p>
+
+            </div>
+
+
+            <span class="banner-icon">
+                👨‍🍳
+            </span>
+
+        </div>
+
+
+        <!-- FOOD GRID -->
+
+        <div
+            id="foodGrid"
+            class="food-grid">
+        </div>
+
+
+        <!-- EMPTY SEARCH RESULT -->
+
+        <div
+            id="emptyState"
+            class="empty-state hidden">
+
+            <span>
+                🔎
+            </span>
+
+            <h3>
+                No dishes found
+            </h3>
+
+            <p>
+                Try another search or category.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="brand">
+
+        <span class="logo-mark">
+            🍴
+        </span>
+
+        <span>
+            foodie
+        </span>
+
+    </div>
+
+    <p>
+        © 2026 Foodie · Made with love for food lovers.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

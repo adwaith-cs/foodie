@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Foodie — Your Cart
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <a class="brand" href="index.html">
+
+        <span class="logo-mark">
+            🍴
+        </span>
+
+        <span>
+            foodie
+        </span>
+
+    </a>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="menu.html">
+            Menu
+        </a>
+
+        <a
+            class="active"
+            href="cart.html">
+
+            Cart
+
+            <span class="cart-badge cart-count">
+                0
+            </span>
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="checkout-main">
+
+
+    <div class="page-title">
+
+        <span class="eyebrow">
+            YOUR ORDER
+        </span>
+
+        <h1>
+            Shopping cart
+        </h1>
+
+        <p>
+            Review your delicious choices before checkout.
+        </p>
+
+    </div>
+
+
+
+    <div class="cart-layout">
+
+
+        <!-- CART ITEMS -->
+
+        <section class="cart-panel">
+
+            <div class="panel-head">
+
+                <h2>
+                    Your items
+                </h2>
+
+                <span id="itemCount">
+                    0 items
+                </span>
+
+            </div>
+
+
+            <div id="cartItems">
+            </div>
+
+
+            <!-- EMPTY CART -->
+
+            <div
+                id="cartEmpty"
+                class="empty-state hidden">
+
+                <span>
+                    🛒
+                </span>
+
+                <h3>
+                    Your cart is empty
+                </h3>
+
+                <p>
+                    Add something delicious from the menu.
+                </p>
+
+                <a
+                    class="btn btn-primary"
+                    href="menu.html">
+
+                    Explore Menu
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= ORDER SUMMARY ================= -->
+
+        <aside class="summary-card">
+
+            <h2>
+                Order summary
+            </h2>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Subtotal
+                </span>
+
+                <b id="subtotal">
+                    ₹0
+                </b>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Delivery fee
+                </span>
+
+                <b id="delivery">
+                    ₹0
+                </b>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Taxes & charges
+                </span>
+
+                <b id="tax">
+                    ₹0
+                </b>
+
+            </div>
+
+
+            <!-- COUPON -->
+
+            <div class="coupon">
+
+                <input
+                    id="couponInput"
+                    placeholder="Promo code">
+
+                <button id="couponBtn">
+                    Apply
+                </button>
+
+            </div>
+
+
+            <p
+                id="couponMsg"
+                class="coupon-msg">
+            </p>
+
+
+            <div class="total-row">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="total">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <button
+                id="checkoutBtn"
+                class="btn btn-primary full">
+
+                Proceed to Checkout →
+
+            </button>
+
+
+            <p class="secure-note">
+
+                🔒 Secure checkout · No hidden fees
+
+            </p>
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="brand">
+
+        <span class="logo-mark">
+            🍴
+        </span>
+
+        <span>
+            foodie
+        </span>
+
+    </div>
+
+    <p>
+        © 2026 Foodie.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
