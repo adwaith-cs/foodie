@@ -1,224 +1,194 @@
-/* =========================================
-   FOOD DATA
-========================================= */
+/* =========================================================
+   FOODIE - JAVASCRIPT
+   ========================================================= */
+
+
+/* =========================================================
+   FOOD DATABASE
+   ========================================================= */
 
 const foods = [
 
     {
         id: 1,
-        name: "Margherita Pizza",
-        restaurant: "La Pino's Kitchen",
-        category: "Pizza",
-        price: 249,
-        rating: 4.9,
-        emoji: "🍕",
-        bg: "#fff0ec",
-        tag: "Bestseller"
+        name: "Chicken Biryani",
+        restaurant: "Malabar Spice",
+        category: "Biryani",
+        price: 180,
+        rating: 4.8,
+        time: "25-30 min",
+
+        image:
+            "https://images.unsplash.com/photo-1563379091339-03246963d51a?auto=format&fit=crop&w=800&q=85"
     },
+
 
     {
         id: 2,
-        name: "Classic Chicken Burger",
-        restaurant: "Burger Barn",
-        category: "Burger",
-        price: 199,
-        rating: 4.8,
-        emoji: "🍔",
-        bg: "#fff7df",
-        tag: "Popular"
+        name: "Cheese Burger",
+        restaurant: "Burger House",
+        category: "Burgers",
+        price: 149,
+        rating: 4.6,
+        time: "20-25 min",
+
+        image:
+            "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=85"
     },
+
 
     {
         id: 3,
-        name: "Butter Chicken",
-        restaurant: "Spice Route",
-        category: "Indian",
-        price: 289,
-        rating: 4.9,
-        emoji: "🍛",
-        bg: "#fff0df",
-        tag: "Chef's pick"
+        name: "Margherita Pizza",
+        restaurant: "Pizza Corner",
+        category: "Pizza",
+        price: 249,
+        rating: 4.7,
+        time: "25-30 min",
+
+        image:
+            "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=85"
     },
+
 
     {
         id: 4,
-        name: "Veg Hakka Noodles",
-        restaurant: "Wok & Roll",
-        category: "Chinese",
-        price: 219,
-        rating: 4.7,
-        emoji: "🥡",
-        bg: "#edf8ff",
-        tag: ""
+        name: "Masala Dosa",
+        restaurant: "South Indian Kitchen",
+        category: "South Indian",
+        price: 90,
+        rating: 4.8,
+        time: "15-20 min",
+
+        image:
+            "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=85"
     },
+
 
     {
         id: 5,
-        name: "Paneer Tikka Bowl",
-        restaurant: "Green Bowl Co.",
-        category: "Healthy",
-        price: 239,
-        rating: 4.8,
-        emoji: "🥗",
-        bg: "#eef9e9",
-        tag: "Healthy"
+        name: "Creamy Pasta",
+        restaurant: "Pasta Palace",
+        category: "Pasta",
+        price: 199,
+        rating: 4.5,
+        time: "20-25 min",
+
+        image:
+            "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=85"
     },
+
 
     {
         id: 6,
-        name: "Chocolate Lava Cake",
-        restaurant: "Sweet Truth",
-        category: "Dessert",
-        price: 159,
-        rating: 4.9,
-        emoji: "🍫",
-        bg: "#f7edff",
-        tag: "Must try"
+        name: "Butter Chicken",
+        restaurant: "Delhi Darbar",
+        category: "Indian",
+        price: 220,
+        rating: 4.7,
+        time: "25-30 min",
+
+        image:
+            "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=800&q=85"
     },
+
 
     {
         id: 7,
-        name: "Chicken Biryani",
-        restaurant: "Malabar Kitchen",
-        category: "Indian",
-        price: 299,
-        rating: 4.9,
-        emoji: "🍚",
-        bg: "#fff1dd",
-        tag: "Top rated"
+        name: "Samosa",
+        restaurant: "Chai & Snacks",
+        category: "Snacks",
+        price: 60,
+        rating: 4.6,
+        time: "10-15 min",
+
+        image:
+            "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=85"
     },
+
 
     {
         id: 8,
-        name: "Double Cheese Burger",
-        restaurant: "Burger Barn",
-        category: "Burger",
-        price: 249,
-        rating: 4.7,
-        emoji: "🍔",
-        bg: "#fff7df",
-        tag: ""
-    },
+        name: "Idli",
+        restaurant: "South Indian Kitchen",
+        category: "South Indian",
+        price: 70,
+        rating: 4.5,
+        time: "10-15 min",
 
-    {
-        id: 9,
-        name: "Farmhouse Pizza",
-        restaurant: "La Pino's Kitchen",
-        category: "Pizza",
-        price: 279,
-        rating: 4.8,
-        emoji: "🍕",
-        bg: "#fff0ec",
-        tag: ""
-    },
-
-    {
-        id: 10,
-        name: "Mango Cheesecake",
-        restaurant: "Sweet Truth",
-        category: "Dessert",
-        price: 189,
-        rating: 4.8,
-        emoji: "🍰",
-        bg: "#fff2f5",
-        tag: "New"
-    },
-
-    {
-        id: 11,
-        name: "Veg Fried Rice",
-        restaurant: "Wok & Roll",
-        category: "Chinese",
-        price: 199,
-        rating: 4.6,
-        emoji: "🍜",
-        bg: "#edf8ff",
-        tag: ""
-    },
-
-    {
-        id: 12,
-        name: "Avocado Salad",
-        restaurant: "Green Bowl Co.",
-        category: "Healthy",
-        price: 259,
-        rating: 4.7,
-        emoji: "🥑",
-        bg: "#eef9e9",
-        tag: "Fresh"
+        image:
+            "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=85"
     }
 
 ];
 
 
-/* =========================================
+
+/* =========================================================
    CART
-========================================= */
+   ========================================================= */
 
 let cart =
     JSON.parse(
-        localStorage.getItem("foodie_cart") || "[]"
-    );
+        localStorage.getItem("foodieCart")
+    ) || [];
 
 
-/* =========================================
-   CURRENCY
-========================================= */
 
-const money = n =>
-    "₹" +
-    Math.round(n)
-        .toLocaleString("en-IN");
-
-
-/* =========================================
+/* =========================================================
    SAVE CART
-========================================= */
+   ========================================================= */
 
-const saveCart = () => {
+function saveCart() {
 
     localStorage.setItem(
-        "foodie_cart",
+        "foodieCart",
         JSON.stringify(cart)
     );
 
-    updateBadges();
-
-};
+}
 
 
-/* =========================================
-   CART BADGE
-========================================= */
 
-const updateBadges = () => {
+/* =========================================================
+   CART COUNT
+   ========================================================= */
+
+function updateCartCount() {
+
+    const count =
+        cart.reduce(
+            (total, item) =>
+                total + item.quantity,
+            0
+        );
+
 
     document
         .querySelectorAll(".cart-count")
-        .forEach(e => {
+        .forEach(element => {
 
-            e.textContent =
-                cart.reduce(
-                    (sum, item) =>
-                        sum + item.qty,
-                    0
-                );
+            element.textContent = count;
 
         });
 
-};
+}
 
 
-/* =========================================
+
+/* =========================================================
    ADD TO CART
-========================================= */
+   ========================================================= */
 
 function addToCart(id) {
 
-    const item =
+    const food =
         foods.find(
-            food => food.id === id
+            item => item.id === id
         );
+
+
+    if (!food) return;
 
 
     const existing =
@@ -229,15 +199,16 @@ function addToCart(id) {
 
     if (existing) {
 
-        existing.qty++;
+        existing.quantity++;
 
-    }
-
-    else {
+    } else {
 
         cart.push({
-            ...item,
-            qty: 1
+
+            ...food,
+
+            quantity: 1
+
         });
 
     }
@@ -245,79 +216,21 @@ function addToCart(id) {
 
     saveCart();
 
-    renderCart();
+    updateCartCount();
 
-
-    /* BUTTON FEEDBACK */
-
-    const button =
-        document.querySelector(
-            `[data-add="${id}"]`
-        );
-
-
-    if (button) {
-
-        const oldText =
-            button.textContent;
-
-        button.textContent =
-            "✓ Added";
-
-
-        setTimeout(() => {
-
-            button.textContent =
-                oldText;
-
-        }, 900);
-
-    }
+    showNotification(
+        `${food.name} added to cart!`
+    );
 
 }
 
 
-/* =========================================
-   CHANGE QUANTITY
-========================================= */
 
-function changeQty(id, delta) {
+/* =========================================================
+   REMOVE FROM CART
+   ========================================================= */
 
-    const item =
-        cart.find(
-            item => item.id === id
-        );
-
-
-    if (!item)
-        return;
-
-
-    item.qty += delta;
-
-
-    if (item.qty <= 0) {
-
-        cart =
-            cart.filter(
-                item => item.id !== id
-            );
-
-    }
-
-
-    saveCart();
-
-    renderCart();
-
-}
-
-
-/* =========================================
-   REMOVE ITEM
-========================================= */
-
-function removeItem(id) {
+function removeFromCart(id) {
 
     cart =
         cart.filter(
@@ -327,431 +240,451 @@ function removeItem(id) {
 
     saveCart();
 
+    updateCartCount();
+
     renderCart();
 
 }
 
 
-/* =========================================
-   RENDER FOOD ITEMS
-========================================= */
 
-function renderFoods(list = foods) {
+/* =========================================================
+   CHANGE QUANTITY
+   ========================================================= */
 
-    const grid =
+function changeQuantity(
+    id,
+    change
+) {
+
+    const item =
+        cart.find(
+            item => item.id === id
+        );
+
+
+    if (!item) return;
+
+
+    item.quantity += change;
+
+
+    if (item.quantity <= 0) {
+
+        removeFromCart(id);
+
+        return;
+
+    }
+
+
+    saveCart();
+
+    updateCartCount();
+
+    renderCart();
+
+}
+
+
+
+/* =========================================================
+   DISPLAY FOOD CARDS
+   ========================================================= */
+
+function renderFoods(
+    foodList = foods
+) {
+
+    const container =
         document.getElementById(
             "foodGrid"
         );
 
 
-    if (!grid)
-        return;
+    if (!container) return;
 
 
-    document
-        .getElementById("emptyState")
-        .classList
-        .toggle(
-            "hidden",
-            list.length > 0
-        );
+    if (foodList.length === 0) {
 
+        container.innerHTML = `
 
-    grid.innerHTML =
-        list.map(food => `
+            <div class="empty-state">
 
-        <article class="food-card-item">
-
-            <div
-                class="food-image"
-                style="background:${food.bg}"
-            >
-
-                ${
-                    food.tag
-                    ?
-                    `<span class="tag">
-                        ${food.tag}
-                    </span>`
-                    :
-                    ""
-                }
-
-                ${food.emoji}
-
-            </div>
-
-
-            <div class="food-info">
+                <div class="empty-icon">
+                    🍽️
+                </div>
 
                 <h3>
-                    ${food.name}
+                    No food found
                 </h3>
 
-
-                <div class="restaurant">
-                    ${food.restaurant}
-                </div>
-
-
-                <div class="rating">
-
-                    ★ ${food.rating}
-
-                    <span style="color:#aaa">
-
-                        · 30-40 min
-
-                    </span>
-
-                </div>
-
-
-                <div class="food-bottom">
-
-                    <span class="price">
-
-                        ${money(food.price)}
-
-                    </span>
-
-
-                    <button
-                        class="add-btn"
-                        data-add="${food.id}"
-                        onclick="addToCart(${food.id})"
-                    >
-
-                        + Add
-
-                    </button>
-
-                </div>
+                <p>
+                    Try another search or category.
+                </p>
 
             </div>
 
-        </article>
+        `;
 
-    `).join("");
-
-}
-
-
-/* =========================================
-   MENU PAGE
-========================================= */
-
-function setupMenu() {
-
-    if (!document.getElementById("foodGrid"))
         return;
-
-
-    let current =
-        "All";
-
-
-    /* URL CATEGORY */
-
-    const params =
-        new URLSearchParams(
-            location.search
-        );
-
-
-    if (params.get("category")) {
-
-        current =
-            params.get("category");
 
     }
 
 
-    /* ACTIVE CATEGORY */
+    container.innerHTML =
+        foodList.map(food => `
 
-    document
-        .querySelectorAll(".chip")
-        .forEach(chip => {
-
-            if (
-                chip.dataset.category
-                === current
-            ) {
-
-                document
-                    .querySelector(".chip.active")
-                    ?.classList
-                    .remove("active");
-
-                chip.classList.add(
-                    "active"
-                );
-
-            }
-
-        });
+            <article class="food-card">
 
 
-    /* APPLY FILTER */
+                <!-- REAL FOOD IMAGE -->
 
-    const apply = () => {
+                <div class="food-image">
 
-        let list =
-            foods.filter(
-                food =>
-                    current === "All"
-                    ||
-                    food.category === current
-            );
-
-
-        /* SEARCH */
-
-        const query =
-            (
-                document
-                    .getElementById(
-                        "searchInput"
-                    )
-                    ?.value
-                || ""
-            ).toLowerCase();
+                    <img
+                        src="${food.image}"
+                        alt="${food.name}"
+                        loading="lazy"
+                        onerror="this.src='https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=85'"
+                    >
 
 
-        if (query) {
+                    <span class="rating">
 
-            list =
-                list.filter(food =>
+                        ★ ${food.rating}
 
-                    (
-                        food.name
-                        + " "
-                        + food.restaurant
-                        + " "
-                        + food.category
-                    )
-                    .toLowerCase()
-                    .includes(query)
+                    </span>
 
-                );
-
-        }
+                </div>
 
 
-        /* SORT */
 
-        const sort =
-            document.getElementById(
-                "sortSelect"
-            ).value;
+                <!-- FOOD DETAILS -->
+
+                <div class="food-info">
 
 
-        if (sort === "rating") {
+                    <div class="food-category">
 
-            list.sort(
-                (a, b) =>
-                    b.rating - a.rating
-            );
+                        ${food.category}
 
-        }
+                    </div>
 
 
-        if (sort === "price-low") {
+                    <h3>
 
-            list.sort(
-                (a, b) =>
-                    a.price - b.price
-            );
+                        ${food.name}
 
-        }
+                    </h3>
 
 
-        if (sort === "price-high") {
+                    <p class="restaurant">
 
-            list.sort(
-                (a, b) =>
-                    b.price - a.price
-            );
+                        ${food.restaurant}
 
-        }
+                    </p>
 
 
-        renderFoods(list);
+                    <div class="food-meta">
 
-    };
+                        <span>
 
+                            🕒 ${food.time}
 
-    /* CATEGORY BUTTONS */
-
-    document
-        .querySelectorAll(".chip")
-        .forEach(chip => {
-
-            chip.onclick = () => {
-
-                current =
-                    chip.dataset.category;
+                        </span>
 
 
-                document
-                    .querySelectorAll(".chip")
-                    .forEach(
-                        item =>
-                            item.classList
-                                .remove("active")
-                    );
+                        <span class="price">
+
+                            ₹${food.price}
+
+                        </span>
+
+                    </div>
 
 
-                chip.classList.add(
-                    "active"
-                );
+                    <button
+                        class="add-cart-btn"
+                        onclick="addToCart(${food.id})">
+
+                        Add to Cart
+
+                    </button>
 
 
-                apply();
-
-            };
-
-        });
+                </div>
 
 
-    /* SEARCH */
+            </article>
 
-    document
-        .getElementById(
+        `).join("");
+
+}
+
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+function searchFood() {
+
+    const input =
+        document.getElementById(
             "searchInput"
-        )
-        .oninput = apply;
+        );
 
 
-    /* SORT */
+    if (!input) return;
+
+
+    const search =
+        input.value
+            .toLowerCase()
+            .trim();
+
+
+    const filtered =
+        foods.filter(food =>
+
+            food.name
+                .toLowerCase()
+                .includes(search)
+
+            ||
+
+            food.restaurant
+                .toLowerCase()
+                .includes(search)
+
+            ||
+
+            food.category
+                .toLowerCase()
+                .includes(search)
+
+        );
+
+
+    renderFoods(filtered);
+
+}
+
+
+
+/* =========================================================
+   CATEGORY FILTER
+   ========================================================= */
+
+function setCategory(
+    category,
+    button
+) {
 
     document
-        .getElementById(
-            "sortSelect"
+        .querySelectorAll(
+            ".category-btn"
         )
-        .onchange = apply;
+        .forEach(btn => {
+
+            btn.classList.remove(
+                "active"
+            );
+
+        });
 
 
-    apply();
+    if (button) {
+
+        button.classList.add(
+            "active"
+        );
+
+    }
+
+
+    if (category === "All") {
+
+        renderFoods(foods);
+
+        return;
+
+    }
+
+
+    const filtered =
+        foods.filter(
+            food =>
+                food.category ===
+                category
+        );
+
+
+    renderFoods(filtered);
 
 }
 
 
-/* =========================================
-   CALCULATE TOTALS
-========================================= */
 
-function totals() {
+/* =========================================================
+   SORT
+   ========================================================= */
 
-    const subtotal =
-        cart.reduce(
-            (sum, item) =>
-                sum +
-                item.price *
-                item.qty,
-            0
+function sortFoods(value) {
+
+    let sorted =
+        [...foods];
+
+
+    if (value === "rating") {
+
+        sorted.sort(
+            (a, b) =>
+                b.rating - a.rating
         );
 
-
-    const delivery =
-        subtotal
-            ? subtotal >= 499
-                ? 0
-                : 39
-            : 0;
+    }
 
 
-    const tax =
-        Math.round(
-            subtotal * 0.05
+    else if (value === "price-low") {
+
+        sorted.sort(
+            (a, b) =>
+                a.price - b.price
         );
 
+    }
 
-    return {
 
-        subtotal,
+    else if (value === "price-high") {
 
-        delivery,
+        sorted.sort(
+            (a, b) =>
+                b.price - a.price
+        );
 
-        tax,
+    }
 
-        total:
-            subtotal +
-            delivery +
-            tax
 
-    };
+    renderFoods(sorted);
 
 }
 
 
-/* =========================================
+
+/* =========================================================
    RENDER CART
-========================================= */
+   ========================================================= */
 
 function renderCart() {
 
-    const box =
+    const container =
         document.getElementById(
             "cartItems"
         );
 
 
-    if (!box)
-        return;
+    if (!container) return;
 
 
-    const empty =
-        document.getElementById(
-            "cartEmpty"
-        );
+    if (cart.length === 0) {
 
+        container.innerHTML = `
 
-    empty.classList.toggle(
-        "hidden",
-        cart.length > 0
-    );
+            <div class="empty-cart">
 
+                <div class="empty-icon">
+                    🛒
+                </div>
 
-    box.innerHTML =
-        cart.map(item => `
+                <h2>
+                    Your cart is empty
+                </h2>
 
-        <div class="cart-line">
+                <p>
+                    Add some delicious food
+                    to get started.
+                </p>
 
+                <a
+                    href="menu.html"
+                    class="primary-btn">
 
-            <div
-                class="cart-thumb"
-                style="background:${item.bg}"
-            >
+                    Browse Food
 
-                ${item.emoji}
+                </a>
 
             </div>
 
-
-            <div>
-
-                <h3>
-                    ${item.name}
-                </h3>
+        `;
 
 
-                <p>
+        updateCartSummary();
 
-                    ${item.restaurant}
+        return;
 
-                    ·
+    }
 
-                    ${money(item.price)}
-                    each
 
-                </p>
+    container.innerHTML =
+        cart.map(item => `
+
+            <div class="cart-item">
+
+
+                <img
+                    src="${item.image}"
+                    alt="${item.name}"
+                    onerror="this.src='https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=400&q=80'"
+                >
+
+
+                <div class="cart-item-info">
+
+                    <h3>
+                        ${item.name}
+                    </h3>
+
+                    <p>
+                        ${item.restaurant}
+                    </p>
+
+                    <strong>
+                        ₹${item.price}
+                    </strong>
+
+                </div>
+
+
+                <div class="quantity-control">
+
+                    <button
+                        onclick="changeQuantity(${item.id}, -1)">
+
+                        −
+
+                    </button>
+
+
+                    <span>
+                        ${item.quantity}
+                    </span>
+
+
+                    <button
+                        onclick="changeQuantity(${item.id}, 1)">
+
+                        +
+
+                    </button>
+
+                </div>
 
 
                 <button
-                    class="remove"
-                    onclick="removeItem(${item.id})"
-                >
+                    class="remove-btn"
+                    onclick="removeFromCart(${item.id})">
 
                     Remove
 
@@ -759,367 +692,520 @@ function renderCart() {
 
             </div>
 
-
-            <strong>
-
-                ${money(
-                    item.price *
-                    item.qty
-                )}
-
-            </strong>
+        `).join("");
 
 
-            <div class="qty">
+    updateCartSummary();
 
-                <button
-                    onclick="changeQty(${item.id}, -1)"
-                >
-                    −
-                </button>
+}
 
 
-                <b>
-                    ${item.qty}
-                </b>
 
+/* =========================================================
+   CALCULATE TOTAL
+   ========================================================= */
 
-                <button
-                    onclick="changeQty(${item.id}, 1)"
-                >
-                    +
-                </button>
+function calculateTotals() {
 
-            </div>
-
-        </div>
-
-    `).join("");
-
-
-    /* ITEM COUNT */
-
-    document
-        .getElementById(
-            "itemCount"
-        )
-        .textContent =
-        `${cart.reduce(
-            (sum, item) =>
-                sum + item.qty,
+    const subtotal =
+        cart.reduce(
+            (total, item) =>
+                total +
+                item.price *
+                item.quantity,
             0
-        )} items`;
+        );
 
 
-    /* TOTALS */
-
-    const t =
-        totals();
-
-
-    document
-        .getElementById("subtotal")
-        .textContent =
-        money(t.subtotal);
+    const delivery =
+        subtotal > 0
+            ? 40
+            : 0;
 
 
-    document
-        .getElementById("delivery")
-        .textContent =
-        money(t.delivery);
+    const tax =
+        subtotal * 0.05;
 
 
-    document
-        .getElementById("tax")
-        .textContent =
-        money(t.tax);
+    const total =
+        subtotal +
+        delivery +
+        tax;
 
 
-    document
-        .getElementById("total")
-        .textContent =
-        money(t.total);
+    return {
+        subtotal,
+        delivery,
+        tax,
+        total
+    };
 
 }
 
 
-/* =========================================
-   CART PAGE
-========================================= */
 
-function setupCart() {
+/* =========================================================
+   UPDATE CART SUMMARY
+   ========================================================= */
 
-    if (!document.getElementById("cartItems"))
-        return;
+function updateCartSummary() {
 
-
-    renderCart();
+    const totals =
+        calculateTotals();
 
 
-    /* COUPON */
-
-    document
-        .getElementById(
-            "couponBtn"
-        )
-        .onclick = () => {
+    const subtotal =
+        document.getElementById(
+            "subtotal"
+        );
 
 
-            const code =
-                document
-                    .getElementById(
-                        "couponInput"
-                    )
-                    .value
-                    .trim()
-                    .toUpperCase();
+    const delivery =
+        document.getElementById(
+            "delivery"
+        );
 
 
-            if (code === "FOODIE10") {
-
-                document
-                    .getElementById(
-                        "couponMsg"
-                    )
-                    .textContent =
-                    "✓ Promo code applied!";
-
-            }
-
-            else if (code) {
-
-                document
-                    .getElementById(
-                        "couponMsg"
-                    )
-                    .textContent =
-                    "Try FOODIE10 for 10% off.";
-
-            }
-
-            else {
-
-                document
-                    .getElementById(
-                        "couponMsg"
-                    )
-                    .textContent =
-                    "";
-
-            }
-
-        };
+    const tax =
+        document.getElementById(
+            "tax"
+        );
 
 
-    /* CHECKOUT */
-
-    document
-        .getElementById(
-            "checkoutBtn"
-        )
-        .onclick = () => {
+    const total =
+        document.getElementById(
+            "total"
+        );
 
 
-            if (cart.length) {
+    if (subtotal)
+        subtotal.textContent =
+            `₹${totals.subtotal.toFixed(2)}`;
 
-                location.href =
-                    "checkout.html";
 
-            }
+    if (delivery)
+        delivery.textContent =
+            `₹${totals.delivery.toFixed(2)}`;
 
-            else {
 
-                alert(
-                    "Your cart is empty. Add some food first!"
-                );
+    if (tax)
+        tax.textContent =
+            `₹${totals.tax.toFixed(2)}`;
 
-            }
 
-        };
+    if (total)
+        total.textContent =
+            `₹${totals.total.toFixed(2)}`;
 
 }
 
 
-/* =========================================
-   CHECKOUT PAGE
-========================================= */
 
-function setupCheckout() {
+/* =========================================================
+   COUPON
+   ========================================================= */
 
-    if (
-        !document.getElementById(
-            "checkoutForm"
-        )
-    )
-        return;
+function applyCoupon() {
+
+    const input =
+        document.getElementById(
+            "couponInput"
+        );
 
 
-    /* EMPTY CART */
+    if (!input) return;
 
-    if (!cart.length) {
 
-        location.href =
-            "menu.html";
+    const code =
+        input.value
+            .trim()
+            .toUpperCase();
+
+
+    if (code === "FOODIE10") {
+
+        showNotification(
+            "10% coupon applied!"
+        );
+
+    }
+
+    else {
+
+        showNotification(
+            "Invalid coupon code."
+        );
+
+    }
+
+}
+
+
+
+/* =========================================================
+   GO TO CHECKOUT
+   ========================================================= */
+
+function goToCheckout() {
+
+    if (cart.length === 0) {
+
+        showNotification(
+            "Your cart is empty!"
+        );
 
         return;
 
     }
 
 
-    const t =
-        totals();
+    window.location.href =
+        "checkout.html";
+
+}
 
 
-    document
-        .getElementById(
-            "checkoutTotal"
-        )
-        .textContent =
-        money(t.total);
 
+/* =========================================================
+   CHECKOUT SUMMARY
+   ========================================================= */
 
-    document
-        .getElementById(
-            "checkoutTotalSide"
-        )
-        .textContent =
-        money(t.total);
+function renderCheckout() {
 
-
-    /* ORDER ITEMS */
-
-    document
-        .getElementById(
+    const container =
+        document.getElementById(
             "checkoutItems"
-        )
-        .innerHTML =
+        );
 
+
+    if (!container) return;
+
+
+    container.innerHTML =
         cart.map(item => `
 
-            <div class="mini-item">
+            <div class="order-item">
 
-                <span>
-
-                    ${item.emoji}
+                <span class="order-item-name">
 
                     ${item.name}
-
-                    × ${item.qty}
+                    × ${item.quantity}
 
                 </span>
 
+                <span class="order-item-price">
 
-                <b>
-
-                    ${money(
+                    ₹${(
                         item.price *
-                        item.qty
-                    )}
+                        item.quantity
+                    ).toFixed(2)}
 
-                </b>
+                </span>
 
             </div>
 
         `).join("");
 
 
-    /* FORM */
-
-    document
-        .getElementById(
-            "checkoutForm"
-        )
-        .onsubmit = e => {
-
-            e.preventDefault();
+    const totals =
+        calculateTotals();
 
 
-            const name =
-                document
-                    .getElementById(
-                        "name"
-                    )
-                    .value
-                    .trim();
+    const subtotal =
+        document.getElementById(
+            "checkoutSubtotal"
+        );
 
 
-            const address =
-                document
-                    .getElementById(
-                        "address"
-                    )
-                    .value
-                    .trim();
+    const delivery =
+        document.getElementById(
+            "checkoutDelivery"
+        );
 
 
-            const city =
-                document
-                    .getElementById(
-                        "city"
-                    )
-                    .value
-                    .trim();
+    const tax =
+        document.getElementById(
+            "checkoutTax"
+        );
 
 
-            /* SAVE ORDER */
-
-            localStorage.setItem(
-
-                "foodie_last_order",
-
-                JSON.stringify({
-
-                    name:
-
-                        name,
-
-                    address:
-
-                        address
-                        + ", "
-                        + city,
-
-                    number:
-
-                        Math.floor(
-                            1000 +
-                            Math.random()
-                            * 9000
-                        )
-
-                })
-
-            );
+    const total =
+        document.getElementById(
+            "checkoutTotal"
+        );
 
 
-            /* CLEAR CART */
-
-            localStorage.removeItem(
-                "foodie_cart"
-            );
+    if (subtotal)
+        subtotal.textContent =
+            `₹${totals.subtotal.toFixed(2)}`;
 
 
-            cart = [];
+    if (delivery)
+        delivery.textContent =
+            `₹${totals.delivery.toFixed(2)}`;
 
 
-            /* SUCCESS PAGE */
+    if (tax)
+        tax.textContent =
+            `₹${totals.tax.toFixed(2)}`;
 
-            location.href =
-                "success.html";
 
-        };
+    if (total)
+        total.textContent =
+            `₹${totals.total.toFixed(2)}`;
 
 }
 
 
-/* =========================================
-   INITIALIZE
-========================================= */
 
-updateBadges();
+/* =========================================================
+   PLACE ORDER
+   ========================================================= */
 
-setupMenu();
+function placeOrder(event) {
 
-setupCart();
+    event.preventDefault();
 
-setupCheckout();
+
+    if (cart.length === 0) {
+
+        showNotification(
+            "Your cart is empty!"
+        );
+
+        return;
+
+    }
+
+
+    const name =
+        document.getElementById(
+            "customerName"
+        ).value;
+
+
+    const phone =
+        document.getElementById(
+            "customerPhone"
+        ).value;
+
+
+    const pin =
+        document.getElementById(
+            "customerPin"
+        ).value;
+
+
+    const address =
+        document.getElementById(
+            "customerAddress"
+        ).value;
+
+
+    const payment =
+        document.querySelector(
+            'input[name="payment"]:checked'
+        ).value;
+
+
+    const orderNumber =
+        "FD" +
+        Math.floor(
+            100000 +
+            Math.random() * 900000
+        );
+
+
+    const orderDetails = {
+
+        orderNumber,
+
+        name,
+
+        phone,
+
+        pin,
+
+        address,
+
+        payment,
+
+        total:
+            calculateTotals().total
+
+    };
+
+
+    localStorage.setItem(
+        "foodieOrder",
+        JSON.stringify(
+            orderDetails
+        )
+    );
+
+
+    cart = [];
+
+    saveCart();
+
+
+    window.location.href =
+        "success.html";
+
+}
+
+
+
+/* =========================================================
+   SUCCESS PAGE
+   ========================================================= */
+
+function loadSuccessPage() {
+
+    const data =
+        JSON.parse(
+            localStorage.getItem(
+                "foodieOrder"
+            )
+        );
+
+
+    if (!data) return;
+
+
+    const orderNumber =
+        document.getElementById(
+            "orderNumber"
+        );
+
+
+    const name =
+        document.getElementById(
+            "successName"
+        );
+
+
+    const phone =
+        document.getElementById(
+            "successPhone"
+        );
+
+
+    const address =
+        document.getElementById(
+            "successAddress"
+        );
+
+
+    if (orderNumber)
+        orderNumber.textContent =
+            data.orderNumber;
+
+
+    if (name)
+        name.textContent =
+            data.name;
+
+
+    if (phone)
+        phone.textContent =
+            data.phone;
+
+
+    if (address)
+        address.textContent =
+            data.address;
+
+}
+
+
+
+/* =========================================================
+   NOTIFICATION
+   ========================================================= */
+
+function showNotification(message) {
+
+    const notification =
+        document.createElement(
+            "div"
+        );
+
+
+    notification.className =
+        "foodie-notification";
+
+
+    notification.textContent =
+        message;
+
+
+    document.body.appendChild(
+        notification
+    );
+
+
+    setTimeout(() => {
+
+        notification.classList.add(
+            "show"
+        );
+
+    }, 10);
+
+
+    setTimeout(() => {
+
+        notification.classList.remove(
+            "show"
+        );
+
+
+        setTimeout(() => {
+
+            notification.remove();
+
+        }, 300);
+
+    }, 2500);
+
+}
+
+
+
+/* =========================================================
+   INITIALIZE WEBSITE
+   ========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        updateCartCount();
+
+        renderFoods();
+
+        renderCart();
+
+        renderCheckout();
+
+        loadSuccessPage();
+
+
+        const searchInput =
+            document.getElementById(
+                "searchInput"
+            );
+
+
+        if (searchInput) {
+
+            searchInput.addEventListener(
+                "input",
+                searchFood
+            );
+
+        }
+
+    }
+);

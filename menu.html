@@ -8,7 +8,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Foodie — Explore Food</title>
+    <title>Foodie - Menu</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -17,309 +17,294 @@
 <body>
 
 
-<!-- ================= NAVBAR ================= -->
+    <!-- NAVBAR -->
 
-<header class="navbar">
+    <header class="navbar">
 
-    <a class="brand" href="index.html">
+        <div class="container nav-container">
 
-        <span class="logo-mark">
-            🍴
-        </span>
+            <a href="index.html" class="logo">
 
-        <span>
-            foodie
-        </span>
+                <span class="logo-icon">🍴</span>
 
-    </a>
+                Foodie
+
+            </a>
 
 
-    <!-- SEARCH -->
+            <nav class="nav-links">
 
-    <div class="search-wrap">
+                <a href="index.html">
+                    Home
+                </a>
 
-        <span>
-            ⌕
-        </span>
+                <a href="menu.html">
+                    Menu
+                </a>
 
-        <input
-            id="searchInput"
-            type="search"
-            placeholder="Search for dishes or restaurants..."
-        >
+                <a href="cart.html" class="cart-link">
 
-    </div>
+                    🛒 Cart
 
+                    <span class="cart-count">
+                        0
+                    </span>
 
-    <nav>
+                </a>
 
-        <a href="index.html">
-            Home
-        </a>
-
-        <a class="active" href="menu.html">
-            Menu
-        </a>
-
-        <a href="cart.html">
-
-            Cart
-
-            <span class="cart-badge cart-count">
-                0
-            </span>
-
-        </a>
-
-    </nav>
-
-</header>
-
-
-
-<!-- ================= MAIN ================= -->
-
-<main class="menu-main">
-
-
-    <!-- MENU HERO -->
-
-    <section class="menu-hero">
-
-        <div>
-
-            <span class="eyebrow">
-                DISCOVER • ORDER • ENJOY
-            </span>
-
-            <h1>
-
-                What are you
-                <br>
-
-                <span>
-                    craving today?
-                </span>
-
-            </h1>
+            </nav>
 
         </div>
 
-
-        <div class="delivery-pill">
-
-            📍
-
-            <span>
-
-                <small>
-                    Delivering to
-                </small>
-
-                <b>
-                    Thrissur, Kerala
-                </b>
-
-            </span>
-
-            ✎
-
-        </div>
-
-    </section>
+    </header>
 
 
 
-    <!-- ================= FILTERS ================= -->
+    <!-- MENU -->
 
-    <section
-        class="filter-area"
-        id="restaurants"
-    >
+    <main class="menu-page">
 
-        <div class="chips">
-
-            <button
-                class="chip active"
-                data-category="All">
-
-                All
-
-            </button>
+        <div class="container">
 
 
-            <button
-                class="chip"
-                data-category="Pizza">
+            <div class="menu-header">
 
-                🍕 Pizza
+                <div class="delivery-pill">
+                    🚴 25-30 min delivery
+                </div>
 
-            </button>
-
-
-            <button
-                class="chip"
-                data-category="Burger">
-
-                🍔 Burgers
-
-            </button>
-
-
-            <button
-                class="chip"
-                data-category="Indian">
-
-                🍛 Indian
-
-            </button>
-
-
-            <button
-                class="chip"
-                data-category="Chinese">
-
-                🥡 Chinese
-
-            </button>
-
-
-            <button
-                class="chip"
-                data-category="Dessert">
-
-                🍰 Desserts
-
-            </button>
-
-
-            <button
-                class="chip"
-                data-category="Healthy">
-
-                🥗 Healthy
-
-            </button>
-
-        </div>
-
-
-        <select
-            id="sortSelect"
-            class="sort-select"
-        >
-
-            <option value="popular">
-                Most popular
-            </option>
-
-            <option value="rating">
-                Highest rated
-            </option>
-
-            <option value="price-low">
-                Price: low to high
-            </option>
-
-            <option value="price-high">
-                Price: high to low
-            </option>
-
-        </select>
-
-    </section>
-
-
-
-    <!-- ================= RESTAURANT BANNER ================= -->
-
-    <section>
-
-        <div class="restaurant-banner">
-
-            <div>
-
-                <span class="eyebrow">
-                    FEATURED PARTNER
-                </span>
-
-                <h2>
-                    Good food starts here.
-                </h2>
+                <h1>
+                    Explore Our Menu
+                </h1>
 
                 <p>
-                    Hand-picked restaurants with great ratings
-                    and reliable delivery.
+                    Choose from delicious meals
+                    prepared by top-rated restaurants.
                 </p>
 
             </div>
 
 
-            <span class="banner-icon">
-                👨‍🍳
-            </span>
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for food, restaurant..."
+                >
+
+                <button onclick="searchFood()">
+                    Search
+                </button>
+
+            </div>
+
+
+
+            <!-- FILTERS -->
+
+            <div class="filters">
+
+                <div class="category-filters">
+
+                    <button
+                        class="category-btn active"
+                        onclick="setCategory('All', this)">
+                        All
+                    </button>
+
+                    <button
+                        class="category-btn"
+                        onclick="setCategory('Biryani', this)">
+                        Biryani
+                    </button>
+
+                    <button
+                        class="category-btn"
+                        onclick="setCategory('Burgers', this)">
+                        Burgers
+                    </button>
+
+                    <button
+                        class="category-btn"
+                        onclick="setCategory('Pizza', this)">
+                        Pizza
+                    </button>
+
+                    <button
+                        class="category-btn"
+                        onclick="setCategory('South Indian', this)">
+                        South Indian
+                    </button>
+
+                    <button
+                        class="category-btn"
+                        onclick="setCategory('Pasta', this)">
+                        Pasta
+                    </button>
+
+                    <button
+                        class="category-btn"
+                        onclick="setCategory('Indian', this)">
+                        Indian
+                    </button>
+
+                    <button
+                        class="category-btn"
+                        onclick="setCategory('Snacks', this)">
+                        Snacks
+                    </button>
+
+                </div>
+
+
+                <select
+                    class="sort-select"
+                    id="sortSelect"
+                    onchange="sortFoods(this.value)">
+
+                    <option value="default">
+                        Sort By
+                    </option>
+
+                    <option value="rating">
+                        Highest Rated
+                    </option>
+
+                    <option value="price-low">
+                        Price: Low to High
+                    </option>
+
+                    <option value="price-high">
+                        Price: High to Low
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- RESTAURANT BANNER -->
+
+            <div class="restaurant-banner">
+
+                <div>
+
+                    <h2>
+                        🍽️ Today's Foodie Picks
+                    </h2>
+
+                    <p>
+                        Delicious meals selected especially
+                        for you.
+                    </p>
+
+                </div>
+
+                <div class="delivery-pill">
+                    ⭐ Highly Rated
+                </div>
+
+            </div>
+
+
+
+            <!-- FOOD CARDS -->
+
+            <div
+                class="food-grid"
+                id="foodGrid">
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <h3>🍴 Foodie</h3>
+
+                <p>
+                    Delicious food delivered
+                    straight to your doorstep.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <div class="footer-links">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="menu.html">
+                        Menu
+                    </a>
+
+                    <a href="cart.html">
+                        Cart
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h3>Support</h3>
+
+                <div class="footer-links">
+
+                    <a href="#">
+                        Help Centre
+                    </a>
+
+                    <a href="#">
+                        Contact Us
+                    </a>
+
+                    <a href="#">
+                        Privacy
+                    </a>
+
+                </div>
+
+            </div>
 
         </div>
 
 
-        <!-- FOOD GRID -->
+        <div class="container footer-bottom">
 
-        <div
-            id="foodGrid"
-            class="food-grid">
-        </div>
-
-
-        <!-- EMPTY SEARCH RESULT -->
-
-        <div
-            id="emptyState"
-            class="empty-state hidden">
-
-            <span>
-                🔎
-            </span>
-
-            <h3>
-                No dishes found
-            </h3>
-
-            <p>
-                Try another search or category.
-            </p>
+            © 2026 Foodie. All rights reserved.
 
         </div>
 
-    </section>
-
-</main>
+    </footer>
 
 
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="footer">
-
-    <div class="brand">
-
-        <span class="logo-mark">
-            🍴
-        </span>
-
-        <span>
-            foodie
-        </span>
-
-    </div>
-
-    <p>
-        © 2026 Foodie · Made with love for food lovers.
-    </p>
-
-</footer>
-
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>

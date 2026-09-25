@@ -5,263 +5,324 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Foodie — Deliciousness Delivered</title>
+    <title>Foodie - Delicious Food Delivered</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="landing-page">
+<body>
 
-    <!-- ================= NAVBAR ================= -->
-
+    <!-- NAVBAR -->
     <header class="navbar">
 
-        <a class="brand" href="index.html">
-            <span class="logo-mark">🍴</span>
-            <span>foodie</span>
-        </a>
+        <div class="container nav-container">
 
-        <nav>
-            <a href="menu.html">Explore Food</a>
-
-            <a href="cart.html">
-                Cart
-                <span class="cart-badge cart-count">0</span>
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🍴</span>
+                Foodie
             </a>
-        </nav>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+
+                <a href="cart.html" class="cart-link">
+                    🛒 Cart
+                    <span class="cart-count">0</span>
+                </a>
+            </nav>
+
+        </div>
 
     </header>
 
 
-    <!-- ================= MAIN ================= -->
+    <!-- HERO -->
+    <section class="hero">
 
-    <main>
+        <div class="container hero-container">
 
-        <!-- HERO SECTION -->
+            <div class="hero-content">
 
-        <section class="hero">
-
-            <div class="hero-copy">
-
-                <span class="eyebrow">
-                    GOOD FOOD • GOOD MOOD
-                </span>
+                <div class="delivery-pill">
+                    🚴 Fast delivery at your doorstep
+                </div>
 
                 <h1>
-                    Your cravings,
-                    <br>
-                    <span>delivered.</span>
+                    Delicious food,
+                    <span>delivered fast.</span>
                 </h1>
 
                 <p>
-                    Discover delicious meals from your favourite local
-                    restaurants, order in a few clicks, and enjoy food
-                    made for your mood.
+                    Discover delicious meals from your favourite
+                    restaurants and get them delivered straight
+                    to your doorstep.
                 </p>
 
+                <div class="hero-buttons">
 
-                <div class="hero-actions">
-
-                    <a class="btn btn-primary" href="menu.html">
-                        Order Now
-                        <span>→</span>
+                    <a href="menu.html" class="primary-btn">
+                        Explore Menu
                     </a>
 
-                    <a class="btn btn-light" href="menu.html#restaurants">
-                        Browse Restaurants
+                    <a href="#categories" class="secondary-btn">
+                        View Categories
                     </a>
-
-                </div>
-
-
-                <div class="trust-row">
-
-                    <div>
-                        <strong>4.8/5</strong>
-                        <small>Average rating</small>
-                    </div>
-
-                    <div>
-                        <strong>30 min</strong>
-                        <small>Average delivery</small>
-                    </div>
-
-                    <div>
-                        <strong>50+</strong>
-                        <small>Food choices</small>
-                    </div>
 
                 </div>
 
             </div>
 
 
-            <!-- HERO FOOD DESIGN -->
+            <div class="hero-image">
 
-            <div class="hero-art">
-
-                <div class="blob"></div>
-
-                <div class="food-card floating-card card-top">
-                    ⭐ 4.9
-                    <small>Top rated</small>
-                </div>
-
-                <div class="food-plate">
+                <div class="hero-food-circle">
                     🍕
                 </div>
 
-                <div class="food-card floating-card card-bottom">
-                    🔥 Most ordered
-                    <small>Margherita Pizza</small>
-                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STATS -->
+    <section class="stats">
+
+        <div class="container stats-grid">
+
+            <div class="stat-card">
+                <h3>50K+</h3>
+                <p>Happy Customers</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>500+</h3>
+                <p>Restaurant Partners</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>30 min</h3>
+                <p>Average Delivery</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+    <section class="feature-strip">
+
+        <div class="container feature-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">⚡</div>
+
+                <h3>Fast Delivery</h3>
+
+                <p>
+                    Get your favourite food delivered
+                    quickly and safely.
+                </p>
 
             </div>
 
-        </section>
 
+            <div class="feature-card">
 
-        <!-- ================= FEATURES ================= -->
+                <div class="feature-icon">⭐</div>
 
-        <section class="feature-strip">
+                <h3>Top Rated</h3>
 
-            <div>
-                🚀
-                <strong>Fast delivery</strong>
-                <span>Hot & fresh at your door</span>
+                <p>
+                    Choose from highly rated restaurants
+                    and delicious meals.
+                </p>
+
             </div>
 
-            <div>
-                🛡️
-                <strong>Secure payment</strong>
-                <span>Safe & simple checkout</span>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">🔒</div>
+
+                <h3>Secure Payment</h3>
+
+                <p>
+                    Your payments are protected with
+                    secure checkout.
+                </p>
+
             </div>
 
-            <div>
-                💚
-                <strong>Fresh ingredients</strong>
-                <span>Quality you can taste</span>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">🍽️</div>
+
+                <h3>Fresh Food</h3>
+
+                <p>
+                    Enjoy freshly prepared food from
+                    trusted restaurants.
+                </p>
+
             </div>
 
-            <div>
-                🎁
-                <strong>Great offers</strong>
-                <span>Deals made for foodies</span>
-            </div>
+        </div>
 
-        </section>
+    </section>
 
 
-        <!-- ================= CATEGORIES ================= -->
+    <!-- CATEGORIES -->
+    <section class="section" id="categories">
 
-        <section class="home-section">
+        <div class="container">
 
             <div class="section-heading">
 
-                <div>
+                <h2>Explore Categories</h2>
 
-                    <span class="eyebrow">
-                        WHY FOODIE?
-                    </span>
-
-                    <h2>
-                        Made for hungry people.
-                    </h2>
-
-                </div>
-
-                <a href="menu.html">
-                    See all food →
-                </a>
+                <p>
+                    Find exactly what you are craving.
+                </p>
 
             </div>
 
 
             <div class="category-grid">
 
-                <a href="menu.html?category=Pizza"
-                   class="category-card pizza">
-
-                    <span>🍕</span>
-
-                    <h3>Pizza</h3>
-
-                    <p>
-                        Cheesy favourites
-                    </p>
-
+                <a href="menu.html" class="category-card">
+                    <div class="category-icon">🍛</div>
+                    <h3>Biryani</h3>
                 </a>
 
-
-                <a href="menu.html?category=Burger"
-                   class="category-card burger">
-
-                    <span>🍔</span>
-
+                <a href="menu.html" class="category-card">
+                    <div class="category-icon">🍔</div>
                     <h3>Burgers</h3>
-
-                    <p>
-                        Big & juicy
-                    </p>
-
                 </a>
 
-
-                <a href="menu.html?category=Indian"
-                   class="category-card indian">
-
-                    <span>🍛</span>
-
-                    <h3>Indian</h3>
-
-                    <p>
-                        Rich & authentic
-                    </p>
-
+                <a href="menu.html" class="category-card">
+                    <div class="category-icon">🍕</div>
+                    <h3>Pizza</h3>
                 </a>
 
+                <a href="menu.html" class="category-card">
+                    <div class="category-icon">🥞</div>
+                    <h3>South Indian</h3>
+                </a>
 
-                <a href="menu.html?category=Dessert"
-                   class="category-card dessert">
+                <a href="menu.html" class="category-card">
+                    <div class="category-icon">🍝</div>
+                    <h3>Pasta</h3>
+                </a>
 
-                    <span>🍰</span>
-
-                    <h3>Desserts</h3>
-
-                    <p>
-                        Sweet endings
-                    </p>
-
+                <a href="menu.html" class="category-card">
+                    <div class="category-icon">🥤</div>
+                    <h3>Drinks</h3>
                 </a>
 
             </div>
 
-        </section>
+        </div>
 
-    </main>
+    </section>
 
 
-    <!-- ================= FOOTER ================= -->
+    <!-- CTA -->
+    <section class="cta-section">
 
-    <footer class="footer">
+        <div class="container cta-box">
 
-        <div class="brand">
+            <div>
+                <h2>Hungry already?</h2>
 
-            <span class="logo-mark">
-                🍴
-            </span>
+                <p>
+                    Explore our menu and order your
+                    favourite meal today.
+                </p>
+            </div>
 
-            <span>
-                foodie
-            </span>
+            <a href="menu.html" class="primary-btn">
+                Order Now
+            </a>
 
         </div>
 
-        <p>
-            Good food. Great mood. © 2026 Foodie.
-        </p>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <h3>🍴 Foodie</h3>
+
+                <p>
+                    Delicious food from your favourite
+                    restaurants delivered to your doorstep.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="cart.html">Cart</a>
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h3>Support</h3>
+
+                <div class="footer-links">
+                    <a href="#">Help Centre</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Privacy</a>
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h3>Follow Us</h3>
+
+                <div class="footer-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            © 2026 Foodie. All rights reserved.
+
+        </div>
 
     </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 
